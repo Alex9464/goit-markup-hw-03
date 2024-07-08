@@ -63,10 +63,14 @@ body {
   letter-spacing: 0.04em;
   color: var(--white);
   background-color: var(--iris);
+
+  min-width: 169px;
+  height: 56px;
   cursor: pointer;
   display: block;
   padding: 16px 32px;
   border-radius: 4px;
+  border: none;
 }
 
 .btn:hover,
@@ -102,6 +106,10 @@ body {
   align-items: center;
 }
 
+.navigation .logo {
+    margin-right: 76px;
+}
+
 .logo {
   font-family: var(--second-family);
   font-weight: 700;
@@ -111,6 +119,7 @@ body {
   text-transform: uppercase;
   color: var(--iris);
 }
+
 .navigation .prt {
   color: var(--navy-blue);
 }
@@ -122,7 +131,6 @@ body {
 .navigation__list {
   display: flex;
   gap: 40px;
-  margin-left: 76px;
 }
 
 .navigation__link {
@@ -170,6 +178,7 @@ body {
 /*                Hero                */
 .hero {
   background-color: var(--navy-blue);
+  padding: 188px 0;
 }
 
 .hero__title {
@@ -179,7 +188,7 @@ body {
   color: var(--white);
   text-align: center;
 
-  width: 496px;
+  max-width: 496px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -189,6 +198,20 @@ body {
 }
 
 /*             Peculiarities             */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .peculiarities__title {
   font-weight: 500;
   font-size: 20px;
@@ -236,11 +259,12 @@ body {
 
 .team__item {
   background-color: var(--white);
+  border-radius: 0 0 4px 4px;
 }
 
 .team__content {
   text-align: center;
-  padding: 32px 16px;
+  padding: 32px 0px;
 }
 
 .team__name {
@@ -249,6 +273,8 @@ body {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
+
+  margin-bottom: 8px;
 }
 
 .team__text {
@@ -277,22 +303,23 @@ body {
   row-gap: 48px;
 }
 
-.portfolio__card {
+.portfolio__content {
   padding: 32px 16px;
-  border-bottom: 1px solid var(--cornflower);
-  border-left: 1px solid var(--cornflower);
-  border-right: 1px solid var(--cornflower);
+  border: 1px solid var(--cornflower);
+  border-top: none;
 }
 
-.portfolio__cart-title {
+.portfolio__content-title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--navy-blue);
+
+  margin-bottom: 8px;
 }
 
-.portfolio__card-text {
+.portfolio__content-text {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -302,7 +329,12 @@ body {
 /*               Footer               */
 .footer {
   background-color: var(--navy-blue);
-  padding: 100px 156px;
+  padding: 100px 0px;
+}
+
+.footer .logo {
+  display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer__text {
@@ -312,5 +344,4 @@ body {
   color: var(--cloud);
 
   width: 264px;
-  margin-top: 16px;
 }
